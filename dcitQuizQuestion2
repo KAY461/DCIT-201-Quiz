@@ -1,0 +1,34 @@
+public class dcitQuizQuestion2 {
+
+     // Version 1: Takes two double scores as parameters.
+
+    public double calculateClassAverage(double score1, double score2) {
+        return (score1 + score2) / 2.0;
+    }
+
+    
+     // Version 2: Takes three double scores as parameters.
+
+    public double calculateClassAverage(double score1, double score2, double score3) {
+        return (score1 + score2 + score3) / 3.0;
+    }
+
+    
+     // Version 3: Takes an array of double scores.
+
+    public double calculateClassAverage(double[] scores) {
+        // Guard clause to prevent division by zero if array is empty
+        if (scores.length == 0) {
+            return 0.0;
+        }
+
+        double sum = 0;
+        // Iterate through each score in the array
+        for (double s : scores) {
+            sum += s;
+        }
+        
+        // Return the sum divided by the total number of elements
+        return sum / scores.length;
+    }
+}
